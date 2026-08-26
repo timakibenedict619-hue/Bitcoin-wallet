@@ -1,3 +1,5 @@
+alert("app.js is loading!");
+
 import { Buffer } from "https://esm.sh/buffer@6.0.3";
 globalThis.Buffer = Buffer;
 
