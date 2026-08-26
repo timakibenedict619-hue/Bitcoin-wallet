@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bitcoin Testnet Wallet</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <main class="wallet">
+
+        <h1>₿ Bitcoin Testnet Wallet</h1>
+
+        <div class="warning">
+            ⚠️ TESTNET ONLY — DO NOT USE REAL BITCOIN
+        </div>
+
+        <!-- WALLET -->
+        <section class="card">
+
+            <h2>Your Wallet</h2>
+
+            <p class="label">Testnet Address</p>
+
+            <div id="address" class="address">
+                Generating...
+            </div>
+
+            <button id="copy" type="button">
+                Copy Address
+            </button>
+
+            <div id="qr" class="qr"></div>
+
+        </section>
+
+
+        <!-- BALANCE -->
+        <section class="card">
+
+            <h2>Balance</h2>
+
+            <div id="balance" class="balance">
+                0.00000000 BTC
+            </div>
+
+            <button id="refresh" type="button">
+                Refresh Balance
+            </button>
+
+        </section>
+
+
+        <!-- SEND -->
+        <section class="card">
+
+            <h2>Send Testnet BTC</h2>
+
+            <p class="muted">
+                Send Bitcoin Testnet to another Testnet address.
+                Never send real Bitcoin from this wallet.
+            </p>
+
+            <label for="recipient">
+                Recipient Testnet Address
+            </label>
+
+            <input
+                id="recipient"
+                type="text"
+                placeholder="tb1..."
+                autocomplete="off"
+            >
+
+            <label for="amount">
+                Amount in BTC
+            </label>
+
+            <input
+                id="amount"
+                type="number"
+                min="0"
+                step="0.00000001"
+                placeholder="0.00000000"
+            >
+
+            <button id="send" type="button">
+                Send Testnet BTC
+            </button>
+
+            <div id="sendResult" class="result"></div>
+
+        </section>
+
+
+        <div class="footer">
+            Bitcoin Testnet Development Wallet
+        </div>
+
+    </main>
+
+
+    <!-- IMPORTANT: app.js must be in the same folder as index.html -->
+    <script type="module" src="./app.js"></script>
+
+</body>
+</html>
